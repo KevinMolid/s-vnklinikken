@@ -1,34 +1,45 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+
+// Import components
+import Navigation from './components/Navigation'
+import Hero from './components/Hero'
+import InfoBox from './components/InfoBox'
+import Section1 from './components/Section1'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <Navigation />
+      <Hero />
+      <div class="grid-3-col">
+        <InfoBox 
+          icon="fa-solid fa-calendar-days" 
+          title="Timebestilling" 
+          txt="Her kan du bestille time online." 
+          btnTxt="Bestill time"
+          />
+        <InfoBox 
+          icon="fa-solid fa-location-dot" 
+          title="Vår adresse" 
+          txt="Vi holder til i Rådhusgata 20 i Oslo sentrum." 
+          btnTxt="Vis på kart"
+          />
+        <InfoBox 
+          icon="fa-solid fa-comments"
+          title="Kontakt Oss" 
+          txt="Ta gjerne kontakt med oss på telefon eller e-post." 
+          tlf="(+47) 22 60 18 00"
+          email="post@sovnklinikken.no"
+          />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div class="grid-2-col">
+        <Section1 />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      
+    </div>
   )
 }
 
