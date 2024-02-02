@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Section1(){
+function Section2(){
     return(
         <section>
             <div className="container grid-2-col">
@@ -27,4 +27,4 @@ function Section1(){
     )
 }
 
-export default Section1
+export default Section2

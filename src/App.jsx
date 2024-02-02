@@ -6,6 +6,7 @@ import Navigation from './components/Navigation'
 import Hero from './components/Hero'
 import InfoBox from './components/InfoBox'
 import Section1 from './components/Section1'
+import Section2 from './components/Section2'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
           btnTxt="Bestill time"
           />
         <InfoBox 
+          className="adress-box"
           icon="fa-solid fa-location-dot" 
           title="Vår adresse" 
           txt="Vi holder til i Rådhusgata 20 i Oslo sentrum." 
@@ -35,9 +37,9 @@ function App() {
           email="post@sovnklinikken.no"
           />
       </div>
-      <div class="grid-2-col">
-        <Section1 />
-      </div>
+      <Section1 />
+      <Section2 />
+
       
     </div>
   )

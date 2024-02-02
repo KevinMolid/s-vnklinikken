@@ -3,13 +3,18 @@ import React from 'react'
 function Navigation(){
     return(
         <nav>
-            <h1 class="logo-txt">SØVNKLINIKKEN</h1>
-            <ul>
+            <img className="nav--logo-img" src="src\assets\logo_raw.png" alt="Sovnklinikken logo"/>
+            <ul className='nav--menu'>
                 <li>Søvnproblemer</li>
+                <hr />
                 <li>Behandling</li>
+                <hr />
                 <li>Priser</li>
+                <hr />
                 <li>Timebestilling</li>
+                <hr />
                 <li>Om oss</li>
+                <hr />
                 <li>Kontakt</li>
             </ul>
         </nav>
